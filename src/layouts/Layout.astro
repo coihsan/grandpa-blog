@@ -1,0 +1,29 @@
+---
+import { pwaInfo } from 'virtual:pwa-info';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+export interface Props {
+	title: string;
+}
+import { SITE_TITLE} from '../consts';
+const { title } = Astro.props as Props;
+---
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description='SITE_DESCRIPTION' />
+    <title>{title}</title>
+    <meta name="description" content={title}>
+    <script src="/src/pwa.ts"></script>
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
+  </head>
+  <body>
+    <Header />
+    <main>
+        <article>
+            <slot />
+        </article>
+    </main>
+    <Footer />
+  </body>
+</html>

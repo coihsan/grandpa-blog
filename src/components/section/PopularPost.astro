@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content"
+import Asside from "./Asside.astro";
+const posts = (await getCollection('posts')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+<Asside borderBottom={true}>
+    <h2 class="font-bold w-full py-2 bg-onyx-600 text-center rounded-md">Recent Post</h2>
+    <ul class="divide-dashed divide-y divide-onyx-500/80">
+        {posts.slice(0, 5).map((list) =>(
+            <li class="py-4 last:pb-0 text-onyx-50 hover:text-sky-400">
+                <a class="text-sm" href={`/posts/${list.slug}`}>
+                    <h1>{list.data.title}</h1>
+                </a>
+            </li>
+        ))}
+    </ul>
+</Asside>

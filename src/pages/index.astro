@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Icon } from "astro-icon/components"
+import { topic } from '../consts';
 ---
 
 <!doctype html>
@@ -10,41 +12,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+	<body class="overflow-hidden relative">
+		<div class="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#181d2a_1px,transparent_1px)] [background-size:1rem_1rem] z-[-1]"></div>
+		<main class="w-full">
+			<div class="absolute top-0 left-0 w-full">
+				<Header />
+			</div>
+			<div class="flex items-center justify-center flex-col w-full h-[100vh] max-w-screen-md mx-auto px-6">
+				<h1 class="font-bold text-4xl lg:text-6xl text-center text-white font-bold pb-6">Hello kids, <br> I'm your Grandpa!</h1>
+				<ul class="flex flex-wrap items-center justify-center gap-3">
+					{topic.map((item) => (
+					  <li class={`${item.style} px-4 py-1 rounded-full border backdrop-blur-lg`}>{item.text}</li>
+					))}
+				</ul>
+				<a class="px-6 py-3 mt-6 rounded-full bg-onyx-50 text-onyx-800 flex items-center justify-center gap-1" href="/blog">
+					<Icon name="explore" width={24} height={24} />
+					<span class="font-bold">Explore</span>
+				</a>
+			</div>
+			<div class="absolute bottom-0 left-0 w-full">
+				<Footer />
+			</div>
 		</main>
-		<Footer />
+	<script>
+		import "../scripts/typing.js";
+	</script>
 	</body>
 </html>

@@ -1,0 +1,7 @@
+@use "astro-breadcrumbs/breadcrumbs.scss" with (
+  $color-link: #d1d5db,
+  $color-hover-link: #a3e635,
+  $overflow-behavior: "wrap",
+  $color-separator: #a3e635,
+  $transition-link-breadcrumbs: all 0.3s ease
+);

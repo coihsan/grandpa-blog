@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon/components';
+import Asside from './section/Asside.astro';
+---
+
+<Asside borderBottom={true}>
+    <div class="flex flex-col">
+        <h2 class="font-semibold text-xl pb-3">Subscribe</h2>
+        <p class="text-onyx-200">Stay up-to-date with news from GreenFrog</p>
+        <a class="flex items-center gap-3 border w-max border-onyx-200 rounded-full mt-6 px-4 py-2 hover:bg-onyx-800" href="/rss.xml" target="_blank" rel="noopener noreferrer">
+            <Icon name="rssBox" width={24} height={24} />
+            <span>RSS Feed</span>
+        </a>
+    </div>
+</Asside>

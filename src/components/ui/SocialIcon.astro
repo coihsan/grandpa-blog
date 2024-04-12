@@ -1,0 +1,53 @@
+---
+import { getShareUrl } from '../../lib/share';
+import { Icon } from 'astro-icon/components';
+const styleButton = "p-5 md:p-2 lg:p-3 border border-zinc-100 rounded-md"
+---
+
+<ul class="flex items-center gap-3 justify-between w-full py-9 max-sm:flex-col bg-onyx-600 rounded-md border border-onyx-600 p-0 lg:p-6">
+  <div>
+    <p class="font-bold text-xl">Share</p>
+  </div>
+  <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-2">
+    <li class={styleButton}>
+      <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+        <Icon name="facebook" width={24} height={24} />
+      </a>
+    </li>  
+  <li class={styleButton}>
+    <a href={getShareUrl('reddit', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="reddit" width={24} height={24} />
+    </a>
+  </li>
+  <li class={styleButton}>
+    <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="twitter" width={24} height={24} />
+    </a>
+  </li>
+  <li class={styleButton}>
+    <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="linkedin" width={24} height={24} />
+    </a>
+  </li>
+  <li class={styleButton}>
+    <a href={getShareUrl('pinterest', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="pinterest" width={24} height={24} />
+    </a>
+  </li>
+  <li class={styleButton}>
+    <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="whatsapp" width={24} height={24} />
+    </a>
+  </li>
+  <li class={styleButton}>
+    <a href={getShareUrl('telegram', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="telegram" width={24} height={24} />
+    </a>
+  </li>
+    <li class={styleButton}>
+      <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+        <Icon name="email" width={24} height={24} />
+      </a>
+    </li>
+  </div>
+</ul>

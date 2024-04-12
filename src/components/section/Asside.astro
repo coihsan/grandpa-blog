@@ -1,0 +1,10 @@
+---
+interface Props{
+    borderBottom?: Boolean;
+    borderTop?: Boolean;
+}
+const {borderBottom = false, borderTop = false } = Astro.props as Props
+---
+<aside class:list={`${borderBottom && "border-b-[1px]"} ${borderTop && "border-t-[1px]"} "hidden lg:block w-full border-onyx-600 px-6 pb-12 py-6 grid"`}>
+    <slot />
+</aside>

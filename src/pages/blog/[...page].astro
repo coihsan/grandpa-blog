@@ -1,0 +1,109 @@
+---
+import { Icon } from 'astro-icon/components';
+import AssideRight from '../../components/AssideRight.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import HeaderPage from '../../components/section/HeaderPage.astro';
+import AssideLeft from '../../components/AssideLeft.astro';
+import SearchBar from '../../components/ui/SearchBar.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { getCollection } from 'astro:content';
+type PaginationResult = {
+    currentPage: number;
+    lastPage: number;
+    data: any[];
+    url: {
+        prev?: string;
+        next?: string;
+    };
+};
+
+type PaginateFunction = (items: any[], config: { pageSize: number }) => Promise<PaginationResult>;
+
+export async function getStaticPaths({ paginate, tag, category }: { paginate: PaginateFunction, tag?: string, category?: string }) {
+    const filterFunction = ({ data }: { data: any }) => {
+        if (data.draft === true) return false;
+
+        if (tag && !data.tags.includes(tag)) return false;
+
+        if (category && data.category !== category) return false;
+
+        return true;
+    };
+
+    const pages = await getCollection('posts', filterFunction);
+    return paginate(pages, { pageSize: 10 });
+}
+
+const { page }: { page: PaginationInfo } = Astro.props;
+const { prev, next } = page.url;
+
+type PaginationInfo = {
+    currentPage: number;
+    lastPage: number;
+    data: PostItem[];
+    url: {
+        prev?: string;
+        next?: string;
+    };
+};
+
+type PostItem = {
+    data: {
+        title: string;
+        description: string;
+        image: string;
+        tags: string[];
+        category: string;
+        pubDate: Date;
+    };
+    slug: string;
+};
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<HeaderPage titleHeading="Welcome, world" desc="Get all the latest news from the Grandpa." />
+		<main class="max-w-screen-xl w-full mx-auto flex max-sm:flex-col">
+			<AssideLeft />
+			<section class="pt-6 border-b-[1px] border-onyx-600 max-w-[650px]">
+				<SearchBar />
+				<div class="inline-block divide-y divide-dashed divide-slate-800">
+					{page.data.map(({ data, slug }) => (
+                            <a href={`/posts/${slug}`} class="group block hover:bg-onyx-800">
+                                <div class="grid px-6 py-12 ">
+                                    <time class="text-sm text-slate-400 flex items-center gap-3"><Icon name="date" /> <FormattedDate date={data.pubDate} /></time>
+									<div class="my-3 bg-green-500/300">
+                                        <h3 class="text-2xl lg:text-3xl font-bold leading-relaxed">{data.title}</h3>
+									    <p class="line-clamp-3 text-slate-400 pt-2">{data.description}</p>
+                                    </div>
+                                    <div class="text-sm flex items-center gap-6 flex-wrap">
+									{data.tags.map((tag)=>(
+										<div class:list={{'text-teal-500 ': tag === 'Google Ads' || tag === 'Google', 'text-sky-400 ': !(tag === 'Google Ads' || tag === 'Google'), 'flex': true,'items-center': true,}}>
+                                            <Icon name="tag" />
+                                            <p>{tag}</p>
+                                        </div>
+									))}
+                                    </div>
+                                </div>
+							</a>
+						))}
+				</div>
+                <div class="text-center py-6 border-t-[1px] border-dashed border-slate-800">
+                    {prev && <a href={prev} class="inline-block mr-4 bg-onyx-500 text-white py-2 px-4 rounded hover:bg-onyx-700">Previous Page</a>}
+                    {next && <a href={next} class="inline-block bg-onyx-500 text-white py-2 px-4 rounded hover:bg-onyx-700">Next Page</a>}
+                </div>
+			</section>
+			<AssideRight />
+		</main>
+		<Footer />
+	</body>
+</html>

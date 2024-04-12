@@ -1,0 +1,60 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { Icon } from 'astro-icon/components';
+import HeaderPage from '../../components/section/HeaderPage.astro';
+import AssideLeft from '../../components/AssideLeft.astro';
+import AssideRight from '../../components/AssideRight.astro';
+import SearchBar from '../../components/ui/SearchBar.astro';
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<HeaderPage titleHeading="Welcome, world" desc="Get all the latest news from the Grandpa." />
+		<main class="max-w-screen-xl w-full mx-auto flex">
+			<AssideLeft />
+			<section class="pt-6 border-b-[1px] border-onyx-600">
+				<SearchBar />
+				<ul class="grid grid-cols-1 divide-y divide-dashed divide-slate-800">
+					{posts.map((post) => (
+							<li class="group grid h-full w-full hover:bg-onyx-800 px-6 py-12">
+								<span class="text-sm flex items-center gap-9 pb-6">
+									{post.data.tags.slice(0,1).map((tag)=>(
+										<a class:list={{'text-teal-500 ': tag === 'Google Ads' || tag === 'Google', 'text-sky-400 ': !(tag === 'Google Ads' || tag === 'Google'),
+										'flex': true,
+										'items-center': true,
+										}} href={tag.slug}><Icon name="tag" /><span>{tag}</span></a>
+									))}
+								</span>
+								<div class="my-3">
+									<h4 class="text-2xl lg:text-3xl font-bold">{post.data.title}</h4>
+									<p class="line-clamp-3 text-slate-400 text-sm text-justify pt-2">{post.data.description}</p>
+								</div>
+								<div class="flex items-center justify-between pt-6">
+									<time class="text-sm text-slate-400 flex items-center gap-3"><Icon name="date" /> <FormattedDate date={post.data.pubDate} /></time>
+									<a class="text-lime-500 text-sm hover:text-lime-400 transitionAll px-4 py-2 rounded-md border border-lime-600/20 bg-lime-600/10" href={`/posts/${post.slug}/`}>
+										Read more...
+									</a>
+								</div>
+							</li>
+						))}
+				</ul>
+			</section>
+			<AssideRight />
+		</main>
+		<Footer />
+	</body>
+</html>
