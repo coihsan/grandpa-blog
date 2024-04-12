@@ -23,7 +23,7 @@ export default {
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
-		plugin(function astroComponentsPlugin({ addComponents, theme }) {
+		plugin(function astroComponentsPlugin({ addComponents }) {
 			addComponents({
 				".container": {
 					"@apply max-w-[1024px] mx-auto px-5 md:px-10 lg:px-16 xl:max-w-[87.5rem]": {},
