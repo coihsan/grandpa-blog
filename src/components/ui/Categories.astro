@@ -1,10 +1,16 @@
 ---
 import { getCollection } from "astro:content";
 const posts = await getCollection('posts')
-const category = [...new Set(posts.map((post) => post.data.category))]
+const checkboxStyle = "size-4 appearance-none border border-onyx-400 checked:bg-lime-500 ring-offset-slate-200 default:ring-2"
+const labelStyle = "flex items-center gap-3 cursor-pointer  has-[:checked]:text-lime-400 has-[:checked]:ring-lime-200"
 ---
-<ul class="grid">
-    {category.map((index) => {
-        <li>{index}</li>
-    })}
-</ul>
+<div class="grid">
+    <label for="googleads" class={labelStyle}>
+        <input type="checkbox" name="" id="googleads" class={checkboxStyle}>
+        <span>Google Ads</span>
+    </label>
+    <label for="seo" class={labelStyle}>
+        <input type="checkbox" name="" id="seo" class={checkboxStyle}>
+        <span>SEO</span>
+    </label>
+</div>

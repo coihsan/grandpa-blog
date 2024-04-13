@@ -9,21 +9,32 @@ import { Icon } from "astro-icon/components"
 
 <header x-data="{open: window.innerWidth < 768 ? false : true}" class="w-full border-b-[1px] relative border-onyx-500 px-6 lg:px-0 mx-auto drop-shadow-2xl z-50 backdrop-blur-sm bg-onyx-950/20">
     <div class="max-w-screen-xl mx-auto py-6 flex items-center relative w-full">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center justify-between mr-0 lg:mr-9 ">
             <Image class="rounded-full" src={GrandpaLogo} width={35} height={35} alt="grandpa logo" x-error="Image could not be loaded" /> <a class="text-xl font-bold leading-none" href="/">{SITE_TITLE}</a>
+            <button class="block absolute right-0 md:hidden lg:hidden" @click="open = ! open"><Icon name={'menu'} width={32} height={32} title="menu" /></button>
         </div>
-        <nav aria-label="Primary" class="relative" x-show="open" :class="{'flex': open, 'hidden': !open}">
-            <div class="ml-9 flex items-center gap-1 max-sm:flex-col max-sm:items-start max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:z-50" x-data="{ open: false }">
+        <nav 
+        aria-label="Primary" 
+        class="md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:flex-row hidden" 
+        x-show="open" @click.outside="open = false"
+        :class="{'flex': open, 'hidden': !open}">
+            <div class="flex flex-col flex-grow text-center gap-2 md:justify-center md:items-center md:flex md:flex-row md:mx-auto max-sm:absolute max-sm:p-2 max-sm:bg-onyx-700/70 max-sm:backdrop-blur-xl max-sm:w-60 max-sm:rounded-lg max-sm:right-10">
                 {navlink.map((item) => item.children && item.children.length ? (
-                    <div class="relative" x-data="{ open: false }">
+                    <div 
+                        class="relative" 
+                        x-data="{ open: false }">
 						<button class="flex items-center font-semibold justify-center w-full px-4 py-2 rounded-md hover:bg-onyx-400/20 transitionAll" x-on:click="open = ! open">
                         {(item.text)}
 						<Icon name={'chevron-down'} width={22} height={22} title="chevron down" x-bind:class="{'rotate-180': open, 'rotate-0': !open}" />
 
                     </button>
-                    <div x-show="open" class="flex flex-col relative lg:absolute divide-solid divide-y-[1px] divide-onyx-400/20 bg-onyx-800 w-auto lg:min-w-48 p-1 top-0 lg:top-11 left-0 origin-center right-0 w-max rounded-md border border-onyx-500">
+                    <div 
+                        x-data="{ isActive: false }"
+                        x-show="open"
+                        x-bind:class="{ 'bg-onyx-200 dark:bg-onyx-600': isActive }"
+                        class="absolute mt-2 bg-onyx-500 right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-onyx-400/20 grid p-1">
                         {item.children.map((sub) =>(
-                            <HeaderLink class="px-4 py-2 rounded-md hover:bg-onyx-400/20 transitionAll" href={sub.url}>{sub.text}</HeaderLink>
+                            <HeaderLink class="px-4 py-2 rounded-md hover:bg-onyx-900/20 transitionAll" href={sub.url}>{sub.text}</HeaderLink>
                         ))}
                     </div>
 					</div>
@@ -32,13 +43,12 @@ import { Icon } from "astro-icon/components"
 						class="px-4 py-2 rounded-md hover:bg-onyx-400/20 transitionAll"
                         href={item.url}
 						x-data="{ isActive: false }"
-						x-bind:class="{ 'rotate-45': isActive }"
+						x-bind:class="{ 'bg-gray-200 dark:bg-gray-600': isActive }"
 						>
                         {item.text}
                     </HeaderLink>
                 ))}
             </div>
         </nav>
-		<button class="block absolute right-0 md:hidden lg:hidden" @click="open = ! open"><Icon name={'menu'} width={32} height={32} title="menu" /></button>
     </div>
 </header>

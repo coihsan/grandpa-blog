@@ -73,13 +73,13 @@ type PostItem = {
 	<body>
 		<Header />
 		<HeaderPage titleHeading="Welcome, world" desc="Get all the latest news from the Grandpa." />
-		<main class="max-w-screen-xl w-full mx-auto flex max-sm:flex-col">
+		<main class="max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row">
 			<AssideLeft />
-			<section class="pt-6 border-b-[1px] border-onyx-600 max-w-[650px]">
+			<section class="pt-6 border-b-[1px] border-onyx-600 w-2xl">
 				<SearchBar />
 				<div class="inline-block divide-y divide-dashed divide-slate-800">
 					{page.data.map(({ data, slug }) => (
-                            <a href={`/posts/${slug}`} class="group block hover:bg-onyx-800">
+                            <a href={`/posts/${slug}`} class="group block hover:bg-onyx-700">
                                 <div class="grid px-6 py-12 ">
                                     <time class="text-sm text-slate-400 flex items-center gap-3"><Icon name="date" /> <FormattedDate date={data.pubDate} /></time>
 									<div class="my-3 bg-green-500/300">

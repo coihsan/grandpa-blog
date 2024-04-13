@@ -48,7 +48,10 @@ export default {
 				},
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},
-				}
+				},
+				".navbar": {
+					"max-sm:flex-col max-sm:items-start max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:z-50":{}
+				},
 			})
 		}),
 	],

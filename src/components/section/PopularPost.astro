@@ -10,7 +10,7 @@ const posts = (await getCollection('posts')).sort(
     <ul class="divide-dashed divide-y divide-onyx-500/80">
         {posts.slice(0, 5).map((list) =>(
             <li class="py-4 last:pb-0 text-onyx-50 hover:text-sky-400">
-                <a class="text-sm" href={`/posts/${list.slug}`}>
+                <a href={`/posts/${list.slug}`}>
                     <h1>{list.data.title}</h1>
                 </a>
             </li>

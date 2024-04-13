@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components"
 interface Props{
     text: string;
     href: string;
@@ -11,8 +10,8 @@ const { text, href, iconName, className } = Astro.props as Props
 <svg class={className} width="123" height="42" fill="white" viewBox="0 0 123 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <a style="display:flex;align-items: center;" href={href}>
         <path d="M0 5C0 2.23858 2.23858 0 5 0H106.498C107.924 0 109.282 0.608739 110.23 1.67315L121.733 14.578C122.549 15.4939 123 16.678 123 17.9049V37C123 39.7614 120.761 42 118 42H5C2.23858 42 0 39.7614 0 37V31.5V5Z" fill="#F7F7F7"/>
-        <image href={iconName} x="15" y="8" width={24} height={24} />
-        <text fill="black" x="45" y="26" font-size="1rem" font-weight="600">{text}</text>
+        <image href={iconName} x="10" y="9" width={24} height={24} />
+        <text fill="black" x="40" y="26" font-size="1rem" font-weight="600">{text}</text>
     </a>
 </svg>
     
