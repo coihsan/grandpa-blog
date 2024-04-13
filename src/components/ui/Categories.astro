@@ -5,12 +5,15 @@ const checkboxStyle = "size-4 appearance-none border border-onyx-400 checked:bg-
 const labelStyle = "flex items-center gap-3 cursor-pointer  has-[:checked]:text-lime-400 has-[:checked]:ring-lime-200"
 ---
 <div class="grid">
-    <label for="googleads" class={labelStyle}>
-        <input type="checkbox" name="" id="googleads" class={checkboxStyle}>
-        <span>Google Ads</span>
-    </label>
-    <label for="seo" class={labelStyle}>
-        <input type="checkbox" name="" id="seo" class={checkboxStyle}>
-        <span>SEO</span>
-    </label>
+    <div class="grid gap-3 mt-5">
+        <label for="googleads" class={labelStyle}>
+            <input type="checkbox" name="" id="googleads" class={checkboxStyle}>
+            <span>Google Ads</span>
+        </label>
+        <label for="seo" class={labelStyle}>
+            <input type="checkbox" name="" id="seo" class={checkboxStyle}>
+            <span>SEO</span>
+        </label>
+    </div>
+    <input type="submit" value="Submit" class="bg-onyx-500 w-max py-3 px-6 rounded-lg border border-onyx-400/20 cursor-pointer mt-5 hoverCustom">
 </div>

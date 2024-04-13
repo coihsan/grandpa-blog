@@ -1,52 +1,52 @@
 ---
 import { getShareUrl } from '../../lib/share';
 import { Icon } from 'astro-icon/components';
-const styleButton = "p-5 md:p-2 lg:p-3 border border-zinc-100 rounded-md"
+const styleButton = "p-5 md:p-2 lg:p-3 bg-onyx-700 backdrop-blur-sm border border-zinc-50/30 rounded-md"
 ---
 
-<ul class="flex items-center gap-3 justify-between w-full py-9 max-sm:flex-col bg-onyx-600 rounded-md border border-onyx-600 p-0 lg:p-6">
+<ul class="flex items-center gap-3 justify-between w-full py-9 max-sm:flex-col bg-gradient-to-br from-emerald-500 via-sky-500 to-fuchsia-500 rounded-md border border-onyx-600 p-0 lg:p-6">
   <div>
-    <p class="font-bold text-xl">Share</p>
+    <p class="font-bold text-xl">Share this post</p>
   </div>
   <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-2">
     <li class={styleButton}>
-      <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
-        <Icon name="facebook" width={24} height={24} />
+      <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener" aria-label="social share to facebook">
+        <Icon name="facebook" width={32} height={32} title="facebook icon" />
       </a>
     </li>  
   <li class={styleButton}>
-    <a href={getShareUrl('reddit', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="reddit" width={24} height={24} />
+    <a href={getShareUrl('reddit', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to reddit">
+      <Icon name="reddit" width={32} height={32} title="reddit icon" />
     </a>
   </li>
   <li class={styleButton}>
-    <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="twitter" width={24} height={24} />
+    <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to twitter">
+      <Icon name="twitter" width={32} height={32} title="twitter icon" />
     </a>
   </li>
   <li class={styleButton}>
-    <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="linkedin" width={24} height={24} />
+    <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to linkedin">
+      <Icon name="linkedin" width={32} height={32} title="linkedin icon" />
     </a>
   </li>
   <li class={styleButton}>
-    <a href={getShareUrl('pinterest', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="pinterest" width={24} height={24} />
+    <a href={getShareUrl('pinterest', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to pinterest">
+      <Icon name="pinterest" width={32} height={32} title="pinterest icon" />
     </a>
   </li>
   <li class={styleButton}>
-    <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="whatsapp" width={24} height={24} />
+    <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to whatsaap">
+      <Icon name="whatsapp" width={32} height={32} title="whatsapp icon" />
     </a>
   </li>
   <li class={styleButton}>
-    <a href={getShareUrl('telegram', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-      <Icon name="telegram" width={24} height={24} />
+    <a href={getShareUrl('telegram', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to telegram">
+      <Icon name="telegram" width={32} height={32} title='telegram icon' />
     </a>
   </li>
     <li class={styleButton}>
-      <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
-        <Icon name="email" width={24} height={24} />
+      <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener" aria-label="social share to email">
+        <Icon name="email" width={32} height={32} title="email icon" />
       </a>
     </li>
   </div>

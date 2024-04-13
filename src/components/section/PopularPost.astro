@@ -6,7 +6,7 @@ const posts = (await getCollection('posts')).sort(
 );
 ---
 <Asside borderBottom={true}>
-    <h2 class="font-bold w-full py-2 bg-onyx-600 text-center rounded-md">Recent Post</h2>
+    <h2 class="text-onyx-400">Recent Post</h2>
     <ul class="divide-dashed divide-y divide-onyx-500/80">
         {posts.slice(0, 5).map((list) =>(
             <li class="py-4 last:pb-0 text-onyx-50 hover:text-sky-400">

@@ -1,8 +1,0 @@
----
-const { bordered } = Astro.props
-const span = false
----
-<div class:list={`${bordered} relative border-dashed border-onyx-100/30 py-9 w-full flex items-center justify-center`}>
-    {span ? <span class="absolute top-[-31px] left-0 h-[30px] w-[30px] border-dashed border-l-[1px] border-onyx-500/30"></span> : null}
-    <slot />
-</div>

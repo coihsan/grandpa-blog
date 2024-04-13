@@ -1,16 +1,19 @@
 ---
 export const prerender = true;
 import { Icon } from 'astro-icon/components';
-import AssideRight from '../../components/AssideRight.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import HeaderPage from '../../components/section/HeaderPage.astro';
-import AssideLeft from '../../components/AssideLeft.astro';
 import SearchBar from '../../components/ui/SearchBar.astro';
 import BaseHead from '../../components/BaseHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
+import BlogSidebar from '../../components/BlogSidebar.astro';
+import ByCategory from '../../components/ByCategory.astro';
+import ByTags from '../../components/ByTags.astro';
+import PopularPost from '../../components/section/PopularPost.astro';
+import Subscribe from '../../components/Subscribe.astro';
 type PaginationResult = {
     currentPage: number;
     lastPage: number;
@@ -63,6 +66,8 @@ type PostItem = {
     slug: string;
 };
 
+const checkboxStyle = "size-4 appearance-none border border-onyx-400 checked:bg-lime-500 ring-offset-slate-200 default:ring-2"
+const labelStyle = "flex items-center gap-3 cursor-pointer  has-[:checked]:text-lime-400 has-[:checked]:ring-lime-200"
 ---
 
 <!DOCTYPE html>
@@ -74,7 +79,10 @@ type PostItem = {
 		<Header />
 		<HeaderPage titleHeading="Welcome, world" desc="Get all the latest news from the Grandpa." />
 		<main class="max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row">
-			<AssideLeft />
+			<BlogSidebar>
+                <ByCategory />
+                <ByTags />
+            </BlogSidebar>
 			<section class="pt-6 border-b-[1px] border-onyx-600 w-2xl">
 				<SearchBar />
 				<div class="inline-block divide-y divide-dashed divide-slate-800">
@@ -103,7 +111,10 @@ type PostItem = {
                     {next && <a href={next} class="inline-block bg-onyx-500 text-white py-2 px-4 rounded hover:bg-onyx-700">Next Page</a>}
                 </div>
 			</section>
-			<AssideRight />
+			<BlogSidebar>
+                <PopularPost />
+                <Subscribe />
+            </BlogSidebar>
 		</main>
 		<Footer />
 	</body>
