@@ -10,15 +10,18 @@ import { Icon } from "astro-icon/components"
 <header x-data="{open: window.innerWidth < 768 ? false : true}" class="w-full border-b-[1px] relative border-onyx-500 px-6 lg:px-0 mx-auto drop-shadow-2xl z-50 backdrop-blur-sm bg-onyx-950/20">
     <div class="max-w-screen-xl mx-auto py-6 flex items-center relative w-full">
         <div class="flex items-center justify-between mr-0 lg:mr-9 ">
-            <Image class="rounded-full" src={GrandpaLogo} width={35} height={35} alt="grandpa logo" x-error="Image could not be loaded" /> <a class="text-xl font-bold leading-none" href="/">{SITE_TITLE}</a>
+            <div class="flex items-center gap-3">
+                <Image class="rounded-full" src={GrandpaLogo} width={35} height={35} alt="grandpa logo" x-error="Image could not be loaded" />
+                <a class="text-xl font-bold leading-none" href="/">{SITE_TITLE}</a>
+            </div>
             <button class="block absolute right-0 md:hidden lg:hidden" @click="open = ! open"><Icon name={'menu'} width={32} height={32} title="menu" /></button>
         </div>
         <nav 
         aria-label="Primary" 
         class="md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:flex-row hidden" 
-        x-show="open" @click.outside="open = false"
+        x-show="open" 
         :class="{'flex': open, 'hidden': !open}">
-            <div class="flex flex-col flex-grow text-center gap-2 md:justify-center md:items-center md:flex md:flex-row md:mx-auto max-sm:absolute max-sm:p-2 max-sm:bg-onyx-700/70 max-sm:backdrop-blur-xl max-sm:w-60 max-sm:rounded-lg max-sm:right-10">
+            <div class="flex flex-col flex-grow text-center gap-2 md:items-center md:flex md:flex-row md:mx-auto max-md:absolute max-md:p-2 max-md:bg-onyx-600 max-md:w-52 max-md:rounded-lg max-md:right-10">
                 {navlink.map((item) => item.children && item.children.length ? (
                     <div 
                         class="relative" 

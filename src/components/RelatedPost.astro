@@ -1,17 +1,19 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection} from 'astro:content';
 import { Icon } from "astro-icon/components"
-const blogEntry = await getCollection('posts')
+const allPosts = await getCollection('posts')
+const { category, title } = Astro.props
+const relatedPosts = allPosts.filter((post) => post.data.category)
 ---
 <div class="mt-12">
     <h3 class="font-bold text-3xl">You might also like...</h3>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-2 mt-12">
-        {blogEntry.slice(0,4).map((entri) =>(
+        {relatedPosts.slice(0,4).map((entri) =>(
             <li class="h-full w-full py-6 hover:bg-onyx-800 px-6 rounded-md bg-onyx-900 border-dashed border border-onyx-600">
                 <a class="" href={`/posts/${entri.slug}/`}>
                     <span class="text-sm text-onyx-200 flex items-center gap-2"><Icon name="date" />{entri.data.pubDate.toString().slice(3,15)}</span>
-                    <h4 class="text-onyx-50 font-bold pt-3 pb-1 text-xl">{entri.data.title}</h4>
-                    <p class="line-clamp-2 text-onyx-100 text-sm text-justify">{entri.data.description}</p>
+                    <h4 class="text-onyx-50 font-bold pt-3 pb-2 text-2xl">{entri.data.title}</h4>
+                    <p class="line-clamp-2 text-onyx-100">{entri.data.description}</p>
                 </a>
             </li>
         ))}
