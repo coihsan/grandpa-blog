@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Icon } from "astro-icon/components"
 import { topic } from '../consts';
+import Buttons from '../components/design/Buttons.astro';
 ---
 
 <!doctype html>
@@ -25,10 +26,11 @@ import { topic } from '../consts';
 					  <li class={`${item.style} px-4 py-1 rounded-full border backdrop-blur-lg`}>{item.text}</li>
 					))}
 				</ul>
-				<a class="px-6 py-3 mt-6 rounded-full bg-onyx-50 text-onyx-800 flex items-center justify-center gap-1" href="/blog">
+				<Buttons className='mt-6' iconName='/src/assets/icons/explore.svg' href='/blog' text='Explore!' />
+				<!-- <a class="px-6 py-3 mt-6 rounded-full bg-onyx-50 text-onyx-800 flex items-center justify-center gap-1" href="/blog">
 					<Icon name="explore" width={24} height={24} />
 					<span class="font-bold">Explore</span>
-				</a>
+				</a> -->
 			</div>
 			<div class="absolute bottom-0 left-0 w-full">
 				<Footer />
