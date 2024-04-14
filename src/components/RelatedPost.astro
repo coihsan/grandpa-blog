@@ -1,9 +1,10 @@
 ---
 import { Icon } from "astro-icon/components"
 import { getCollection} from 'astro:content';
+const { category, title, tags } = Astro.props
 const allPosts = await getCollection('posts')
-const relatedPosts = allPosts.filter((post) => post.data.category === post.data.category 
-&& post.data.title !== post.data.title).slice(0, 4)
+const relatedPosts = allPosts.filter((post) => post.data.category === category 
+&& post.data.title !== title)
 
 
 ---
