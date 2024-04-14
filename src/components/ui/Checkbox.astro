@@ -1,0 +1,19 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+interface Props extends HTMLAttributes<'input'> {
+  labelFor: string;
+  inputID: string;
+  categoryName: string;
+}
+const {labelFor, inputID, categoryName} = Astro.props
+---
+<label for={labelFor} class="size-4 appearance-none focus:ring-lime-500 checked:bg-lime-500 accent-lime-500 focus:accent-lime-500 ring-offset-lime-200 ring-2 rounded-full">
+    <input 
+    type="checkbox"
+    id={inputID}
+    class="flex items-center gap-3 cursor-pointer has-[:checked]:text-lime-400 has-[:checked]:ring-lime-200"
+    aria-label="input category"
+    aria-checked="false"
+     />
+    <span>{categoryName}</span>
+</label>

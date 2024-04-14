@@ -49,6 +49,9 @@ export default {
 				".transitionAll": {
 					"@apply transition-all duration-150 ease-in-out":{},
 				},
+				".hoverS": {
+					"@apply hover:bg-gradient-to-br from-teal-500/40 to-onyx-900 hover:border-teal-500 transitionAll":{},
+				},
 			})
 		}),
 	],
