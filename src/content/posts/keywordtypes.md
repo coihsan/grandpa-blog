@@ -11,7 +11,7 @@ category: "SEO"
 keyword: 
     - "Learn SEO"
 relatedPosts:
-    - seo/seo-or-ppc
+    - seo-or-ppc
 ---
 
 In the ever-evolving landscape of SEO, keywords remain the cornerstone of connecting your content with the searchers actively seeking the information you provide. However, the effectiveness of a keyword hinges on its type. Understanding the various classifications of keywords is essential for building a targeted SEO strategy that attracts the ideal audience to your website.

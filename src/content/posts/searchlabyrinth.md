@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 The world of Google Ads is constantly evolving, and embracing AI is no longer optional - it's the secret weapon to optimize your search campaigns and dominate the SERPs. But with so many AI-powered tools and features, it's easy to feel overwhelmed. Worry not, intrepid adventurer, for this guide will be your trusty map, leading you through the labyrinth of AI-powered possibilities in Google Ads Search:

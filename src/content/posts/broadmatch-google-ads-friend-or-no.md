@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 Broad match in Google Ads – it's the wild card, the mystery box, the potential party animal of keywords. But is it a friend or foe for your campaigns? Let's break it down, ditch the jargon, and get real about broad match's potential and pitfalls.

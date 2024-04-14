@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 While Google may not have officially declared a major core update in December 2023, the search engine landscape has definitely seen some interesting shifts and fluctuations throughout the month. This has left many website owners and SEO professionals scratching their heads, wondering what exactly is going on and how to adapt their strategies.

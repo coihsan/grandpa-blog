@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 Move over, spreadsheets and late nights! Artificial intelligence (AI) is fast becoming the secret sauce of Google Ads Search, transforming the way we create, optimize, and manage campaigns. But how do you harness this powerful tool to elevate your search game and conquer the ever-evolving digital landscape? Buckle up, because we're diving deep into the world of AI-powered Google Ads Search, exploring its capabilities and equipping you with the knowledge to unlock its full potential.
 

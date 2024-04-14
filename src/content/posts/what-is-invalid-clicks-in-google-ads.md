@@ -11,8 +11,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/adssearchcopilot
-    - google/google-ads-campaign-objective-2024
+    - adssearchcopilot
+    - google-ads-campaign-objective-2024
 ---
 
 Invalid clicks in Google Ads are clicks on your ads that aren't the result of genuine user interest. They can artificially inflate your costs and negatively impact your campaign performance.

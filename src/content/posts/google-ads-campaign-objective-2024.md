@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 The Google Ads campaign objective landscape has undergone a seismic shift, leaving some marketers feeling lost in a labyrinth of new options. But fear not, intrepid adventurers! This comprehensive guide will be your trusty map, helping you navigate the revamped terrain and select the objective that propels your campaigns to triumphant heights.

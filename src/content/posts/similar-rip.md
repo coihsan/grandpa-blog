@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Learn Google Ads"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 Remember Similar Audiences in Google Ads? Those magical segments that expanded your reach to users with eerily similar traits to your existing customers? Well, as of August 2023, they've officially joined the digital marketing graveyard. But why did Google axe this popular tool, and what does it mean for your ad campaigns? Buckle up, folks, because we're diving deep into the demise of Similar Audiences and charting your course forward.

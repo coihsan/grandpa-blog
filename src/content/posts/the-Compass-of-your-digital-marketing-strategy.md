@@ -8,8 +8,8 @@ category: "Marketing"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 In the ever-evolving landscape of digital marketing, success hinges on measuring what matters. That's where KPIs (Key Performance Indicators) come in. KPIs are quantifiable metrics that act as a compass, guiding your marketing efforts towards achieving your strategic goals.

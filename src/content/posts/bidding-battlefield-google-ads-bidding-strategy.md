@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 Feeling lost in the labyrinth of Google Ads bidding strategies? Fear not, weary traveler! This guide is your trusty map, leading you through the different bidding options and helping you choose the perfect weapon to conquer your campaign goals.

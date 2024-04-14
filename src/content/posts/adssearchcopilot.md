@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 Move over, spreadsheets and late nights! The future of Google Ads Search is paved with intelligent algorithms and AI-powered tools. While the thought of robots managing your campaigns might send shivers down your spine, hear me out: embracing AI in Google Ads Search isn't just a trend, it's a game-changer.

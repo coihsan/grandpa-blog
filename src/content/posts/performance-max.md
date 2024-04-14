@@ -12,8 +12,8 @@ category: "Google Ads"
 keyword: 
     - "Belajar Google"
 relatedPosts:
-    - google/riseoftherobots
-    - google/performance-max
+    - riseoftherobots
+    - performance-max
 ---
 
 Remember the days of juggling multiple Google Ads campaigns for search, display, YouTube, and more? Enter Performance Max, the ambitious all-in-one campaign type launched in 2021 that promises to simplify campaign management and maximize results across the entire Google Ads ecosystem.
