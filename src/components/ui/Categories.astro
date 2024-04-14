@@ -1,19 +1,24 @@
 ---
-import { getCollection } from "astro:content";
-const posts = await getCollection('posts')
-const checkboxStyle = "size-4 appearance-none border border-onyx-400 checked:bg-lime-500 ring-offset-slate-200 default:ring-2"
+const checkboxStyle = "size-4 appearance-none focus:ring-lime-500 checked:bg-lime-500 accent-lime-500 focus:accent-lime-500 ring-offset-lime-200 ring-2"
 const labelStyle = "flex items-center gap-3 cursor-pointer  has-[:checked]:text-lime-400 has-[:checked]:ring-lime-200"
 ---
 <div class="grid">
     <div class="grid gap-3 mt-5">
+        <label for="all" class={labelStyle}>
+            <input type="checkbox" id="all" class={checkboxStyle} checked aria-checked="true">
+            <span>All</span>
+        </label>
         <label for="googleads" class={labelStyle}>
-            <input type="checkbox" name="" id="googleads" class={checkboxStyle}>
+            <input type="checkbox" id="googleads" class={checkboxStyle} aria-checked="false">
             <span>Google Ads</span>
         </label>
         <label for="seo" class={labelStyle}>
-            <input type="checkbox" name="" id="seo" class={checkboxStyle}>
+            <input type="checkbox" id="seo" class={checkboxStyle} aria-checked="false">
             <span>SEO</span>
         </label>
     </div>
-    <input type="submit" value="Submit" class="bg-onyx-500 w-max py-3 px-6 rounded-lg border border-onyx-400/20 cursor-pointer mt-5 hoverCustom">
+    <div class="flex items-center gap-3 mt-5">
+        <input type="submit" value="Submit" class="bg-onyx-500 w-max py-3 px-6 rounded-lg border border-onyx-400/20 cursor-pointer hoverCustom">
+        <input type="reset" value="reset" class="underline cursor-pointer">
+    </div>
 </div>

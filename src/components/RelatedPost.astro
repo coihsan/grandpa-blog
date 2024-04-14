@@ -1,14 +1,28 @@
 ---
 import { getCollection} from 'astro:content';
 import { Icon } from "astro-icon/components"
-const allPosts = await getCollection('posts')
-const { category, title } = Astro.props
-const relatedPosts = allPosts.filter((post) => post.data.category)
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    ).slice(0, 4);
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
 ---
 <div class="mt-12">
     <h3 class="font-bold text-3xl">You might also like...</h3>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-2 mt-12">
-        {relatedPosts.slice(0,4).map((entri) =>(
+        {posts.((entri) =>(
             <li class="h-full w-full py-6 hover:bg-onyx-800 px-6 rounded-md bg-onyx-900 border-dashed border border-onyx-600">
                 <a class="" href={`/posts/${entri.slug}/`}>
                     <span class="text-sm text-onyx-200 flex items-center gap-2"><Icon name="date" />{entri.data.pubDate.toString().slice(3,15)}</span>
