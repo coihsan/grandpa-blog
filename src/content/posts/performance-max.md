@@ -48,6 +48,6 @@ If you're ready to explore the Performance Max universe, here are some tips to n
 
 In 2023, Performance Max has emerged as a formidable contender in the Google Ads arena. While it might not be the perfect fit for every campaign, its potential for simplified management, automated optimization, and cross-channel reach is undeniable. By understanding its strengths and limitations, adopting a data-driven approach, and embracing a spirit of experimentation, you can unlock the power of Performance Max and propel your Google Ads campaigns to new heights.
 
-**Bonus Tip:** Leverage Google's Performance Max best practices guide and case studies to glean valuable insights and strategies for using this powerful campaign type effectively.
+> **Bonus Tip:** Leverage Google's Performance Max best practices guide and case studies to glean valuable insights and strategies for using this powerful campaign type effectively.
 
 Remember, navigating the Google Ads landscape requires constant learning and adaptation. Embrace the power of Performance Max, experiment, analyze, and refine your approach to conquer the ever-evolving multiverse of online advertising. Good luck!

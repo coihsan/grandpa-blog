@@ -47,6 +47,6 @@ Embrace the Future, Today
 
 The fear of automation replacing marketers is unfounded. Instead, it's a powerful tool that augments your expertise, freeing you from mundane tasks and allowing you to focus on creative strategy, campaign analysis, and building meaningful relationships with your customers. So, take a deep breath, step into the driver's seat alongside your AI co-pilot, and navigate the thrilling journey of automated Google Ads!
 
-**Pro Tip :** Start small with automation. Choose a single campaign or a specific task to experiment with, and gradually expand your confidence and expertise as you witness the magic unfold.
+> **Pro Tip :** Start small with automation. Choose a single campaign or a specific task to experiment with, and gradually expand your confidence and expertise as you witness the magic unfold.
 
 Remember, embracing automation isn't about surrendering to the robots, it's about harnessing their power to propel your Google Ads campaigns to new heights. So, buckle up, marketers, the future is automated, and it's exciting!

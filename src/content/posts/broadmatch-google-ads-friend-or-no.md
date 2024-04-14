@@ -50,7 +50,7 @@ It depends. Broad match can be a powerful tool for reaching new audiences and di
 
 Remember: Google Ads is all about experimentation. Don't be afraid to try out broad match and see how it works for your campaigns. Just be prepared to adapt, learn, and most importantly, have fun!
 
-Bonus Tip: Keep your negative keyword list organized and up-to-date. The more you learn about your audience and their search habits, the better you can refine your negative keywords and make broad match work for you.
+> Bonus Tip: Keep your negative keyword list organized and up-to-date. The more you learn about your audience and their search habits, the better you can refine your negative keywords and make broad match work for you.
 
 So, there you have it – the lowdown on broad match in Google Ads. Friend or foe? You be the judge! But remember, with a little planning and some smart strategies, you can turn this wild card into a winning hand for your campaigns. Good luck!
 

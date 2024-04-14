@@ -80,9 +80,8 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
+	background-color: #121521;
+	padding: 20px;
 	font-size: 1.333em;
 }
 hr {

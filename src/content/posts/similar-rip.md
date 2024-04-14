@@ -44,6 +44,6 @@ Don't fret, digital marketers! The demise of Similar Audiences doesn't spell the
 
 5. Remember: The key to success lies in adaptation and exploration. While the loss of Similar Audiences might sting, it also presents an opportunity to embrace new, privacy-forward strategies and reach even more relevant audiences. So, take a deep breath, dust off your targeting toolbox, and let's navigate this exciting new chapter in digital advertising together!
 
-Bonus Tip: Google Analytics and Audience Insights can be your best friends in this transition. Use them to analyze your website traffic and understand your existing customer base to inform your new targeting strategies.
+>Bonus Tip: Google Analytics and Audience Insights can be your best friends in this transition. Use them to analyze your website traffic and understand your existing customer base to inform your new targeting strategies.
 
 With a little creativity and a proactive approach, you can weather the storm of this change and emerge with even more effective ad campaigns. Good luck!

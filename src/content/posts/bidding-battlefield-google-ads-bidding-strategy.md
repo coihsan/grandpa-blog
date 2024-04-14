@@ -58,7 +58,7 @@ Imagine your budget as a sword and each bid as a swing. Your goal? To land the m
 
 * Experiment with Confidence: Don't be afraid to test different strategies and settings. The more you experiment, the more you'll discover what works best for your campaigns.
 
-Bonus Tip: Leverage Google's Bid Simulator tool to test different bidding strategies and estimate their impact on your budget and performance before making any changes.
+> Bonus Tip: Leverage Google's Bid Simulator tool to test different bidding strategies and estimate their impact on your budget and performance before making any changes.
 
 By understanding the different bidding strategies and mastering the art of optimization, you can transform yourself into a Google Ads bidding champion. So, grab your weapon, choose wisely, and embark on your journey to conquer the bidding battlefield! Remember, with dedication, data, and a thirst for knowledge, you can wield your bidding strategy like a sword, carving a path to campaign success. 
 

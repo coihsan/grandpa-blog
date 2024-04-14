@@ -45,7 +45,8 @@ While AI is a powerful tool, it's not about handing over the reins entirely. Thi
 
 The fear of AI replacing marketers is unfounded. Instead, it's a powerful tool that augments your expertise, freeing you from mundane tasks and allowing you to focus on creative strategy, campaign analysis, and building meaningful relationships with your customers. So, take a deep breath, step into the driver's seat alongside your AI co-pilot, and navigate the thrilling journey of AI-powered Google Ads Search!
 
-Bonus Tip: Start small with AI. Choose a single campaign or a specific task to experiment with, and gradually expand your confidence and expertise as you witness the magic unfold.
+> Bonus Tip: Start small with AI. Choose a single campaign or a specific task to experiment with, and gradually expand your confidence and expertise as you witness the magic unfold.
+
 Remember, embracing AI in Google Ads Search isn't about surrendering to the robots, it's about harnessing their power to propel your campaigns to new heights. So, buckle up, marketers, the future is AI-powered, and it's exciting!
 
 Let's conquer the Google Ads Search landscape together, with the help of our trusty AI companion!
