@@ -19,7 +19,7 @@ import { Icon } from "astro-icon/components"
         <nav 
         aria-label="Primary" 
         class="md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:flex-row hidden" 
-        x-show="open" 
+        x-show="open"  
         :class="{'flex': open, 'hidden': !open}">
             <div class="flex flex-col flex-grow text-center gap-2 md:items-center md:flex md:flex-row md:mx-auto max-md:absolute max-md:p-2 max-md:bg-onyx-600 max-md:w-52 max-md:rounded-lg max-md:right-10">
                 {navlink.map((item) => item.children && item.children.length ? (
@@ -33,9 +33,9 @@ import { Icon } from "astro-icon/components"
                     </button>
                     <div 
                         x-data="{ isActive: false }"
-                        x-show="open"
+                        x-show="open" 
                         x-bind:class="{ 'bg-onyx-200 dark:bg-onyx-600': isActive }"
-                        class="absolute mt-2 bg-onyx-500 right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-onyx-400/20 grid p-1">
+                        class="absolute mt-2 bg-onyx-500 right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-onyx-400/20 grid p-1" >
                         {item.children.map((sub) =>(
                             <HeaderLink class="px-4 py-2 rounded-md hover:bg-onyx-900/20 transitionAll" href={sub.url}>{sub.text}</HeaderLink>
                         ))}
