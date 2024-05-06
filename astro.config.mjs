@@ -6,7 +6,7 @@ import compressor from "astro-compressor";
 import tailwind from "@astrojs/tailwind";
 import alpinejs from "@astrojs/alpinejs";
 import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 import AstroPWA from '@vite-pwa/astro'
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +18,6 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime]
   },
   integrations: [mdx(), sitemap(), icon({iconDir: "src/assets/icons"}), compressor(), tailwind(), alpinejs(), AstroPWA()],
-  output: "server",
+  output: "static",
   adapter: vercel()
 });
