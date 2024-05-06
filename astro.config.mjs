@@ -10,7 +10,10 @@ import vercel from "@astrojs/vercel/serverless";
 import AstroPWA from '@vite-pwa/astro'
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://grandpa-blog.vercel.app/',
+  build: {
+    format: "file",
+  },
   markdown: {
     remarkPlugins: [remarkReadingTime]
   },

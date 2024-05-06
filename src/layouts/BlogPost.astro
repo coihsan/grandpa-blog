@@ -34,7 +34,7 @@ const {title, description, pubDate, minutesRead } = Astro.props;
 					</div>
 					<h1 class="text-4xl font-bold">{title}</h1>
 				</div>
-				<article class="w-full">
+				<article data-pagefind-body class="w-full">
 					<slot />
 				</article>
 			</section>
