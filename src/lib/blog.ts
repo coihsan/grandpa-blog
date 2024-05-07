@@ -15,4 +15,4 @@ export function getRelatedPosts(allPosts: Post[], currentSlug: string, currentTa
     }
   
     return relatedPosts;
-  }
+}
